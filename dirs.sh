@@ -29,3 +29,11 @@ rm -R "${HOME}/Рабочий стол" \
     "${HOME}/Видео" \
     "${HOME}/Изображения"
 
+rm ${HOME}/.config/gtk-3.0/bookmarks
+tee -a "${HOME}/.config/gtk-3.0/bookmarks" > /dev/null <<EOT
+${HOME}/Documents
+${HOME}/Music
+${HOME}/Pictures
+${HOME}/Videos
+${HOME}/Downloads
+EOT
